@@ -111,6 +111,13 @@ h2{ font-size:clamp(1.9rem, 3.2vw, 2.7rem); line-height:1.15; }
   font-size:1.35rem;
   color:var(--ink);
   flex-shrink:0;
+  width: 200px;
+  height: 60px;
+}
+.brand img{
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
 }
 .brand span{ color:var(--raspberry); }
 
@@ -126,6 +133,8 @@ h2{ font-size:clamp(1.9rem, 3.2vw, 2.7rem); line-height:1.15; }
 }
 .main-nav a:hover{ color:var(--ink); }
 .main-nav a:hover::after{ width:100%; }
+.main-nav a.active{ color:var(--ink); }
+.main-nav a.active::after{ width:100%; }
 
 .header-cta{ flex-shrink:0; }
 

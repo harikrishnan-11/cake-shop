@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Stackly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="./index.html" class="brand"><img src="./logo/Untitled design.webp" alt=""></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="./index.html">home</a>
+      <a href="./about.html">About</a>
+      <a href="./cakes.html">Cakes</a>
+      <a href="./service.html">service</a>
+      <a href="./blog.html" class="active">Blog</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+    <a href="./login.html" class="btn btn-primary header-cta">Login</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="hero-copy">
+      <p class="breadcrumb"><a href="./index.html">Home</a> <span>/</span> Blog</p>
+      <p class="hero-kicker">Notes from the kitchen</p>
+      <h1 class="hero-title">
+        <span class="line">What we've</span>
+        <span class="line">learned from</span>
+        <span class="line">eleven years of</span>
+        <span class="line">baking cakes.</span>
+      </h1>
+      <p class="hero-sub">Recipes we're willing to share, lessons from cakes that didn't survive the drive over, and the occasional behind-the-scenes look at the kitchen.</p>
+      <div class="hero-actions">
+        <a href="#blog-grid" class="btn btn-primary">Read the Blog</a>
+        <a href="#blog-newsletter" class="btn btn-ghost">Get It By Email</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="./src/blog/image-4-compressed.webp" alt="Baker writing notes beside a finished cake in the kitchen">
+      <div class="hero-badge">
+        <strong>60+</strong>
+        <span>posts and counting</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED POST ===== -->
+  <section class="blog-featured reveal" data-animate="fade-up">
+    <a href="./404.html" class="featured-post">
+      <div class="featured-post-media">
+        <img src="./src/blog/image-5-compressed.webp" alt="The Honey Rosette cake being sliced to reveal nine thin layers">
+      </div>
+      <div class="featured-post-copy">
+        <div class="post-meta"><span class="post-tag">Recipes</span><span>·</span><span>12 min read</span><span>·</span><span>Aug 2026</span></div>
+        <h3>Why our Honey Rosette takes a day and a half to build</h3>
+        <p>Nine layers of honey sponge sounds excessive until you taste what cultured cream does between each one. Here's the long version of how — and why — we still build it entirely by hand.</p>
+        <span class="btn btn-primary">Read the Full Story</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- ===== BLOG GRID ===== -->
+  <section id="blog-grid" class="blog-grid-section reveal" data-animate="fade-up">
+    <div class="section-head">
+      <h2>Latest from the kitchen</h2>
+    </div>
+    <div class="blog-filters" id="blogFilters">
+      <button class="blog-filter active" data-filter="all">All Posts</button>
+      <button class="blog-filter" data-filter="recipes">Recipes</button>
+      <button class="blog-filter" data-filter="behind">Behind the Scenes</button>
+      <button class="blog-filter" data-filter="events">Events &amp; Weddings</button>
+      <button class="blog-filter" data-filter="tips">Tips &amp; Care</button>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card" data-category="recipes">
+        <img src="./src/blog/image-6-compressed.webp" alt="Chocolate cake batter being poured into a baking tin">
+        <div class="blog-card-body">
+          <div class="post-meta"><span class="post-tag">Recipes</span><span>·</span><span>7 min</span></div>
+          <h3>The one change that fixed our chocolate sponge</h3>
+          <p>A single swap in how we melt the butter made every chocolate cake since noticeably richer.</p>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="events">
+        <img src="./src/blog/image-7-compressed.webp" alt="Wedding cake set up at a reception venue">
+        <div class="blog-card-body">
+          <div class="post-meta"><span class="post-tag">Events</span><span>·</span><span>9 min</span></div>
+          <h3>Planning a wedding cake timeline that actually works</h3>
+          <p>What to lock in three months out, and what genuinely can wait until the final week.</p>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="tips">
+        <img src="./src/blog/image-8-compressed.webp" alt="Cake boxed for transport with a protective ribbon">
+        <div class="blog-card-body">
+          <div class="post-meta"><span class="post-tag">Tips</span><span>·</span><span>5 min</span></div>
+          <h3>How to actually transport a tiered cake in a car</h3>
+          <p>Flat ground, air conditioning off, and the one seatbelt trick that saves every drive.</p>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="behind">
+        <img src="./src/blog/image-9-compressed.webp" alt="Pastry chefs working together in the Rosette kitchen">
+        <div class="blog-card-body">
+          <div class="post-meta"><span class="post-tag">Behind the Scenes</span><span>·</span><span>6 min</span></div>
+          <h3>A morning in the kitchen before the shop opens</h3>
+          <p>What actually happens between 5am and the first customer walking through the door.</p>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="recipes">
+        <img src="./src/blog/image-10-compressed.webp" alt="Lemon drizzle cake being glazed">
+        <div class="blog-card-body">
+          <div class="post-meta"><span class="post-tag">Recipes</span><span>·</span><span>8 min</span></div>
+          <h3>Getting citrus glaze to set without cracking</h3>
+          <p>The temperature window is smaller than most recipes admit — here's what we watch for.</p>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="tips">
+        <img src="./src/blog/image-11-compressed.webp" alt="Finished cake being stored properly before delivery">
+        <div class="blog-card-body">
+          <div class="post-meta"><span class="post-tag">Tips</span><span>·</span><span>4 min</span></div>
+          <h3>Storing your cake before the party without drying it out</h3>
+          <p>Room temperature, fridge, or neither — it depends more on frosting type than most people think.</p>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="behind">
+        <img src="./src/blog/image-12-compressed.webp" alt="Fresh dairy ingredients delivered to the bakery">
+        <div class="blog-card-body">
+          <div class="post-meta"><span class="post-tag">Behind the Scenes</span><span>·</span><span>6 min</span></div>
+          <h3>Why we still buy butter from one small co-op</h3>
+          <p>It costs more and complicates the schedule. Here's why we haven't switched in eleven years.</p>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="events">
+        <img src="./src/blog/image-13-compressed.webp" alt="Dessert table styled for a corporate event">
+        <div class="blog-card-body">
+          <div class="post-meta"><span class="post-tag">Events</span><span>·</span><span>5 min</span></div>
+          <h3>Sizing a dessert table for a guest count you don't know yet</h3>
+          <p>A rough formula we use when clients can only give us a range, not a headcount.</p>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="recipes">
+        <img src="./src/blog/image-14-compressed.webp" alt="Spiced carrot cake with walnut topping">
+        <div class="blog-card-body">
+          <div class="post-meta"><span class="post-tag">Recipes</span><span>·</span><span>6 min</span></div>
+          <h3>Toasting walnuts properly changes the whole cake</h3>
+          <p>A small extra step most recipes skip, and the flavour difference it actually makes.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="blog-pagination">
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER STRIP ===== -->
+  <section id="blog-newsletter" class="reveal" data-animate="fade-up">
+    <div class="blog-newsletter">
+      <h2>Get the weekly menu &amp; new posts</h2>
+      <p>One short email a week — what's baking, plus any new post from the kitchen. No spam, unsubscribe any time.</p>
+      <form id="newsletterForm2">
+        <input type="email" placeholder="you@email.com" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="./index.html" class="brand"><img src="./logo/Untitled design.webp" alt="" style="width: 70%;"></a>
+      <p>Small-batch cakes from Ludhiana, baked fresh for every order.</p>
+      <div class="social-icons">
+        <a href="./404.html" aria-label="Instagram" class="social-icon"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .24 2.4.42.6.23 1 .5 1.5.99.5.5.75.9.98 1.5.18.4.36 1.2.42 2.4.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.24 2-.42 2.4-.23.6-.5 1-.98 1.5-.5.5-.9.75-1.5.98-.4.18-1.2.36-2.4.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2-.24-2.4-.42-.6-.23-1-.5-1.5-.98-.5-.5-.75-.9-.98-1.5-.18-.4-.36-1.2-.42-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.24-2 .42-2.4.23-.6.5-1 .98-1.5.5-.5.9-.75 1.5-.98.4-.18 1.2-.36 2.4-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.52 0-4.76.07-1 .05-1.5.2-1.86.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.36-.3.86-.34 1.86C3.07 8.46 3.07 8.83 3.07 12s0 3.52.07 4.76c.05 1 .2 1.5.34 1.86.18.47.4.8.75 1.15.35.35.68.57 1.15.75.36.14.86.3 1.86.34 1.24.07 1.61.07 4.76.07s3.52 0 4.76-.07c1-.05 1.5-.2 1.86-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.36.3-.86.34-1.86.07-1.24.07-1.61.07-4.76s0-3.52-.07-4.76c-.05-1-.2-1.5-.34-1.86a3 3 0 0 0-.75-1.15 3 3 0 0 0-1.15-.75c-.36-.14-.86-.3-1.86-.34C15.52 4 15.15 4 12 4zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm5.65-2a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0z"/></svg></a>
+        <a href="./404.html" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M13.5 21v-7.9h2.66l.4-3.09H13.5V8.1c0-.9.25-1.5 1.53-1.5h1.63V3.9c-.28-.04-1.25-.12-2.38-.12-2.35 0-3.96 1.44-3.96 4.07v2.14H7.65v3.09h2.67V21h3.18z"/></svg></a>
+        <a href="./404.html" aria-label="Pinterest" class="social-icon"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.63 7.86 6.35 9.32-.09-.79-.17-2.01.03-2.88.19-.79 1.22-5.02 1.22-5.02s-.31-.62-.31-1.54c0-1.44.84-2.52 1.87-2.52.88 0 1.31.66 1.31 1.45 0 .88-.56 2.21-.85 3.44-.24 1.02.51 1.86 1.52 1.86 1.82 0 3.22-1.92 3.22-4.7 0-2.46-1.77-4.18-4.29-4.18-2.92 0-4.64 2.19-4.64 4.45 0 .88.34 1.83.76 2.34.08.1.1.19.07.29-.08.33-.26 1.02-.29 1.16-.05.19-.16.23-.37.14-1.38-.64-2.24-2.65-2.24-4.27 0-3.48 2.53-6.68 7.29-6.68 3.83 0 6.8 2.73 6.8 6.37 0 3.8-2.4 6.86-5.72 6.86-1.12 0-2.17-.58-2.53-1.27l-.69 2.62c-.25.96-.92 2.16-1.37 2.9.99.31 2.04.47 3.15.47 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a>
+        <a href="./404.html" aria-label="WhatsApp" class="social-icon"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12.02 2C6.5 2 2.03 6.47 2.03 12c0 1.77.46 3.45 1.28 4.93L2 22l5.2-1.36a9.9 9.9 0 0 0 4.82 1.23h.01c5.52 0 10-4.47 10-10S17.54 2 12.02 2zm0 18.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.09.81.82-3-.19-.31A8.08 8.08 0 0 1 3.93 12c0-4.47 3.63-8.1 8.09-8.1 4.46 0 8.08 3.63 8.08 8.1 0 4.47-3.62 8.1-8.08 8.1zm4.44-6.06c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02s-.42.06-.64.3c-.22.24-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg></a>
+      </div>
+    </div>
+   <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./cakes.html">Cakes</a>
+      <a href="./service.html">Service</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+    <div class="footer-links">
+      <h4>Visit</h4>
+      <a href="./contact.html">14 Model Town Road, Ludhiana</a>
+      <a href="tel:+919876543210">+91 98765 43210</a>
+      <a href="mailto:hello@rosettebakehouse.com">hello@rosettebakehouse.com</a>
+      <a href="./contact.html">Tue–Sun, 9am–8pm</a>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Get the weekly menu</h4>
+      <p>One short email a week with what's baking. No spam.</p>
+      <form class="mini-newsletter" id="footerForm">
+        <input type="email" placeholder="you@email.com" required>
+        <button type="submit" aria-label="Subscribe">&#8594;</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Stackly. All rights reserved.</p>
+    <p>Made with butter, sugar and a little too much frosting.</p>
+  </div>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+</footer>
+
+<script src="script.js"></script>
+<script src="pages.js"></script>
+<script>
+  const nl2 = document.getElementById('newsletterForm2');
+  if (nl2) {
+    nl2.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = nl2.querySelector('button');
+      const original = btn.textContent;
+      btn.textContent = 'Subscribed!';
+      nl2.querySelector('input').value = '';
+      setTimeout(() => { btn.textContent = original; }, 2500);
+    });
+  }
+</script>
+</body>
+</html>

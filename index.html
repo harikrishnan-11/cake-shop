@@ -3,31 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rosette Bakehouse — Cakes Built Layer by Layer</title>
+<title>Stackly — Cakes Built Layer by Layer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+   .btn-order{
+  display:inline-block;
+  text-align:center;
+  width:80%;
+  margin-top: 20px;
+  padding:.65rem 1rem;
+  border-radius:999px;
+  background:var(--raspberry);
+  color:var(--white);
+  font-family:var(--font-body);
+  font-size:.85rem;
+  font-weight:600;
+  transition:background .2s var(--ease), transform .2s var(--ease);
+}
+ .btn-order:hover{ background:var(--raspberry-dark); transform:translateY(-2px); }
+
+</style>
 </head>
 <body>
 
 <!-- ===== HEADER ===== -->
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="#top" class="brand">Rosette <span>Bakehouse</span></a>
+    <a href="./index.html" class="brand"><img src="./logo/Untitled design.webp" alt=""></a>
 
     <nav class="main-nav" id="mainNav">
-      <a href="#story">Story</a>
-      <a href="#bestsellers">Cakes</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#process">Process</a>
-      <a href="#team">Team</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="./index.html">home</a>
+      <a href="./about.html">About</a>
+      <a href="./cakes.html">Cakes</a>
+      <a href="./service.html">service</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./contact.html">Contact</a>
     </nav>
 
-    <a href="#contact" class="btn btn-primary header-cta">Order a Cake</a>
+    <a href="./login.html" class="btn btn-primary header-cta">Login</a>
 
     <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -49,12 +65,12 @@
       </h1>
       <p class="hero-sub">Small-batch cakes, cupcakes and celebration desserts, mixed by hand every morning and finished the day you pick them up.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Order a Cake</a>
-        <a href="#bestsellers" class="btn btn-ghost">See What's Baking</a>
+        <a href="./404.html" class="btn btn-primary">Order a Cake</a>
+        <a href="./404.html" class="btn btn-ghost">See What's Baking</a>
       </div>
     </div>
     <div class="hero-media">
-      <img src="https://loremflickr.com/1000/1200/wedding-cake?lock=1" alt="Tall white buttercream celebration cake decorated with fresh flowers">
+      <img src="./src/Home/image-2-compressed.webp" alt="Tall white buttercream celebration cake decorated with fresh flowers">
       <div class="hero-badge">
         <strong>10+</strong>
         <span>years of baking</span>
@@ -66,7 +82,7 @@
   <!-- ===== 2. STORY ===== -->
   <section id="story" class="story reveal" data-animate="fade-up">
     <div class="story-media">
-      <img src="https://loremflickr.com/700/850/baker,kitchen?lock=2" alt="Baker piping frosting onto a cake in the Rosette kitchen">
+      <img src="./src/Home/image-3-compressed.webp" alt="Baker piping frosting onto a cake in the Rosette kitchen">
     </div>
     <div class="story-copy">
       <h2>A kitchen that starts before sunrise</h2>
@@ -90,34 +106,49 @@
     </div>
     <div class="bestseller-track" id="bestsellerTrack">
       <article class="cake-card">
-        <img src="https://loremflickr.com/500/400/chocolate-cake?lock=3" alt="Dark chocolate layer cake with ganache drip">
+        <img src="./src/Home/image-4-compressed.webp" alt="Dark chocolate layer cake with ganache drip">
         <h3>Midnight Ganache</h3>
         <p>Dark chocolate sponge, whipped ganache, sea salt.</p>
         <span class="price">₹1,450</span>
+        <div style="display: flex;justify-content: center;">
+          <a href="./404.html" class="btn-order">Order Now</a>
+        </div>
       </article>
       <article class="cake-card">
-        <img src="https://loremflickr.com/500/400/red-velvet-cake?lock=4" alt="Red velvet cake slice with cream cheese frosting">
+        <img src="./src/Home/image-5-compressed.webp" alt="Red velvet cake slice with cream cheese frosting">
         <h3>Red Velvet Hush</h3>
         <p>Cocoa-red sponge, tangy cream cheese frosting.</p>
         <span class="price">₹1,350</span>
+        <div style="display: flex;justify-content: center;">
+          <a href="./404.html" class="btn-order">Order Now</a>
+        </div>
       </article>
       <article class="cake-card">
-        <img src="https://loremflickr.com/500/400/cheesecake?lock=5" alt="Baked cheesecake topped with berries">
+        <img src="./src/Home/image-6-compressed.webp" alt="Baked cheesecake topped with berries">
         <h3>Burnt Basque Cheesecake</h3>
         <p>Slow-baked, caramelised top, no crust in sight.</p>
         <span class="price">₹1,600</span>
+        <div style="display: flex;justify-content: center;">
+          <a href="./404.html" class="btn-order">Order Now</a>
+        </div>
       </article>
       <article class="cake-card">
-        <img src="https://loremflickr.com/500/400/carrot-cake?lock=6" alt="Carrot cake with cream cheese icing and walnuts">
+        <img src="./src/Home/image-7-compressed.webp" alt="Carrot cake with cream cheese icing and walnuts">
         <h3>Spiced Carrot &amp; Walnut</h3>
         <p>Warm spice, toasted walnut, brown-butter icing.</p>
         <span class="price">₹1,400</span>
+        <div style="display: flex;justify-content: center;">
+          <a href="./404.html" class="btn-order">Order Now</a>
+        </div>
       </article>
       <article class="cake-card">
-        <img src="https://loremflickr.com/500/400/lemon-cake?lock=35" alt="Lemon drizzle cake with citrus glaze">
+        <img src="./src/Home/image-8-compressed.webp" alt="Lemon drizzle cake with citrus glaze">
         <h3>Lemon &amp; Poppy Drizzle</h3>
         <p>Bright citrus crumb, thin sugar glaze.</p>
         <span class="price">₹1,250</span>
+        <div style="display: flex;justify-content: center;">
+          <a href="./404.html" class="btn-order">Order Now</a>
+        </div>
       </article>
     </div>
   </section>
@@ -126,20 +157,20 @@
   <section id="categories" class="categories reveal" data-animate="stagger">
     <h2>Order by occasion</h2>
     <div class="category-grid">
-      <a href="#contact" class="category-tile tile-large">
-        <img src="https://loremflickr.com/700/900/wedding-cake?lock=8" alt="Three-tier wedding cake with sugar flowers">
+      <a href="./404.html" class="category-tile tile-large">
+        <img src="./src/Home/image-9-compressed.webp" alt="Three-tier wedding cake with sugar flowers">
         <span class="tile-label">Wedding Cakes</span>
       </a>
-      <a href="#contact" class="category-tile">
-        <img src="https://loremflickr.com/600/500/birthday-cake?lock=7" alt="Birthday cake with candles">
+      <a href="./404.html" class="category-tile">
+        <img src="./src/Home/image-10-compressed.webp" alt="Birthday cake with candles">
         <span class="tile-label">Birthday Cakes</span>
       </a>
-      <a href="#contact" class="category-tile">
-        <img src="https://loremflickr.com/600/500/cupcake?lock=9" alt="Tray of decorated cupcakes">
+      <a href="./404.html" class="category-tile">
+        <img src="./src/Home/image-11-compressed.webp" alt="Tray of decorated cupcakes">
         <span class="tile-label">Cupcakes</span>
       </a>
-      <a href="#contact" class="category-tile tile-wide">
-        <img src="https://loremflickr.com/900/500/custom-cake,fondant?lock=10" alt="Custom fondant cake shaped like a design">
+      <a href="./404.html" class="category-tile tile-wide">
+        <img src="./src/Home/image-12-compressed.webp" alt="Custom fondant cake shaped like a design">
         <span class="tile-label">Custom &amp; Fondant Work</span>
       </a>
     </div>
@@ -148,7 +179,7 @@
   <!-- ===== 5. SIGNATURE SPOTLIGHT ===== -->
   <section id="signature" class="signature reveal" data-animate="fade-in">
     <div class="signature-media">
-      <img src="https://loremflickr.com/900/900/cake,gold?lock=11" alt="Close-up of the signature honey rosette cake">
+      <img src="./src/Home/image-13-compressed.webp" alt="Close-up of the signature honey rosette cake">
     </div>
     <div class="signature-copy">
       <p class="eyebrow-plain">The one we're known for</p>
@@ -159,7 +190,7 @@
         <li>Cultured cream and toasted hazelnut praline</li>
         <li>Hand-piped rosette finish, no fondant</li>
       </ul>
-      <a href="#contact" class="btn btn-primary">Reserve the Honey Rosette</a>
+      <a href="./contact.html" class="btn btn-primary">Reserve the Honey Rosette</a>
     </div>
   </section>
 
@@ -198,7 +229,7 @@
         </li>
       </ol>
       <div class="process-media">
-        <img src="https://loremflickr.com/650/750/pastry-chef,bakery?lock=12" alt="Pastry chef decorating a cake by hand">
+        <img src="./src/Home/image-14-compressed.webp" alt="Pastry chef decorating a cake by hand">
       </div>
     </div>
   </section>
@@ -206,7 +237,7 @@
   <!-- ===== 7. INGREDIENTS / QUALITY ===== -->
   <section id="ingredients" class="ingredients reveal" data-animate="fade-up">
     <div class="ingredients-media">
-      <img src="https://loremflickr.com/800/650/flour,baking-ingredients?lock=13" alt="Flour, eggs and butter laid out on a wooden counter">
+      <img src="./src/Home/image-15-compressed.webp" alt="Flour, eggs and butter laid out on a wooden counter">
     </div>
     <div class="ingredients-copy">
       <h2>What goes in matters more than what goes on top</h2>
@@ -233,22 +264,22 @@
     <p class="section-sub">Four people, one kitchen, no shortcuts.</p>
     <div class="team-grid">
       <article class="team-card">
-        <img src="https://loremflickr.com/420/500/baker,woman,portrait?lock=40" alt="Priya Nair, head baker, smiling in the kitchen">
+        <img src="./src/team/image8-compressed.webp" alt="Priya Nair, head baker, smiling in the kitchen">
         <h3>Priya Nair</h3>
         <span>Head Baker &amp; Founder</span>
       </article>
       <article class="team-card">
-        <img src="https://loremflickr.com/420/500/pastry-chef,man,portrait?lock=41" alt="Arjun Mehta, pastry chef, piping a cake">
+        <img src="./src/team/image7-compressed.webp" alt="Arjun Mehta, pastry chef, piping a cake">
         <h3>Arjun Mehta</h3>
         <span>Pastry Chef</span>
       </article>
       <article class="team-card">
-        <img src="https://loremflickr.com/420/500/cake-decorator,woman?lock=42" alt="Simran Kaur decorating a fondant cake">
+        <img src="./src/team/image10-compressed.webp" alt="Simran Kaur decorating a fondant cake">
         <h3>Simran Kaur</h3>
         <span>Cake Decorator</span>
       </article>
       <article class="team-card">
-        <img src="https://loremflickr.com/420/500/delivery,man,portrait?lock=43" alt="Rohit Sharma loading a cake delivery box">
+        <img src="./src/team/image9-compressed.webp" alt="Rohit Sharma loading a cake delivery box">
         <h3>Rohit Sharma</h3>
         <span>Delivery Lead</span>
       </article>
@@ -259,35 +290,35 @@
   <section id="gallery" class="gallery reveal" data-animate="stagger">
     <h2>A few from the kitchen floor</h2>
     <div class="gallery-grid" id="galleryGrid">
-      <img src="https://loremflickr.com/500/500/cake,dessert?lock=14" alt="Layered dessert cake" class="gallery-img">
-      <img src="https://loremflickr.com/500/700/wedding-cake?lock=15" alt="Wedding cake detail" class="gallery-img tall">
-      <img src="https://loremflickr.com/500/500/macarons?lock=16" alt="Box of macarons" class="gallery-img">
-      <img src="https://loremflickr.com/500/500/cupcake,frosting?lock=17" alt="Frosted cupcake close-up" class="gallery-img">
-      <img src="https://loremflickr.com/500/700/chocolate-cake?lock=18" alt="Chocolate cake slice on a plate" class="gallery-img tall">
-      <img src="https://loremflickr.com/500/500/birthday-cake,candles?lock=19" alt="Birthday cake with lit candles" class="gallery-img">
+      <img src="./src/Home/image-20-compressed.webp" alt="Layered dessert cake" class="gallery-img">
+      <img src="./src/Home/image-21-compressed.webp" alt="Wedding cake detail" class="gallery-img tall">
+      <img src="./src/Home/image-22-compressed.webp" alt="Box of macarons" class="gallery-img">
+      <img src="./src/Home/image-23-compressed.webp" alt="Frosted cupcake close-up" class="gallery-img">
+      <img src="./src/Home/image-24-compressed.webp" alt="Chocolate cake slice on a plate" class="gallery-img tall">
+      <img src="./src/Home/image-15-compressed.webp" alt="Birthday cake with lit candles" class="gallery-img">
     </div>
   </section>
 
   <!-- ===== 9. TESTIMONIALS ===== -->
   <section id="testimonials" class="testimonials reveal" data-animate="fade-in">
     <div class="testimonial-bg">
-      <img src="https://loremflickr.com/1600/700/bakery,interior?lock=23" alt="Warm-lit bakery interior">
+      <img src="./src/Home/image-26-compressed.webp" alt="Warm-lit bakery interior">
     </div>
     <div class="testimonial-wrap">
       <h2>What people say after the last slice</h2>
       <div class="testimonial-track" id="testimonialTrack">
         <blockquote class="testimonial active">
-          <img src="https://loremflickr.com/100/100/woman,portrait?lock=20" alt="Portrait of Ananya R.">
+          <img src="./src/Home/image-27-compressed.webp" alt="Portrait of Ananya R.">
           <p>"We ordered the Honey Rosette for a wedding of 120 guests and it was gone in twenty minutes. Not one crumb came back."</p>
           <cite>Ananya R. — Chandigarh</cite>
         </blockquote>
         <blockquote class="testimonial">
-          <img src="https://loremflickr.com/100/100/man,portrait?lock=21" alt="Portrait of Karan S.">
+          <img src="./src/Home/image-28-compressed.webp" alt="Portrait of Karan S.">
           <p>"I sent a blurry reference photo of my daughter's favourite cartoon and they nailed the design better than I imagined."</p>
           <cite>Karan S. — Ludhiana</cite>
         </blockquote>
         <blockquote class="testimonial">
-          <img src="https://loremflickr.com/100/100/woman,smile?lock=22" alt="Portrait of Meher K.">
+          <img src="./src/Home/image-29-compressed.webp" alt="Portrait of Meher K.">
           <p>"Genuinely the only bakery I've found where the inside tastes as good as the cake looks. Worth the two-day notice."</p>
           <cite>Meher K. — Mohali</cite>
         </blockquote>
@@ -301,10 +332,10 @@
     <div class="builder-copy">
       <h2>Have something specific in mind?</h2>
       <p>Send us a sketch, a reference photo, or just a vibe — most of our custom orders start as a two-line message. We'll come back with a design, a flavour pairing and a price before you commit to anything.</p>
-      <a href="#contact" class="btn btn-primary">Start a Custom Order</a>
+      <a href="./contact.html" class="btn btn-primary">Start a Custom Order</a>
     </div>
     <div class="builder-media">
-      <img src="https://loremflickr.com/750/600/custom-cake,fondant?lock=24" alt="Custom shaped fondant cake in progress">
+      <img src="./src/Home/image-30-compressed.webp" alt="Custom shaped fondant cake in progress">
     </div>
   </section>
 
@@ -321,7 +352,7 @@
           <li>Buttercream finish</li>
           <li>2-day notice</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost">Choose Everyday</a>
+        <a href="./404.html" class="btn btn-ghost">Choose Everyday</a>
       </div>
       <div class="price-card featured">
         <span class="badge">Most ordered</span>
@@ -332,7 +363,7 @@
           <li>Piped or fondant detail</li>
           <li>3-day notice</li>
         </ul>
-        <a href="#contact" class="btn btn-primary">Choose Celebration</a>
+        <a href="./404.html" class="btn btn-primary">Choose Celebration</a>
       </div>
       <div class="price-card">
         <h3>Occasion</h3>
@@ -342,7 +373,7 @@
           <li>Full custom design</li>
           <li>7-day notice</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost">Choose Occasion</a>
+        <a href="./404.html" class="btn btn-ghost">Choose Occasion</a>
       </div>
     </div>
   </section>
@@ -350,25 +381,25 @@
   <!-- ===== 12. EVENTS & CATERING ===== -->
   <section id="events" class="events reveal" data-animate="fade-up">
     <div class="events-media">
-      <img src="https://loremflickr.com/800/650/catering,dessert-table?lock=26" alt="Dessert table set up for an event">
+      <img src="./src/Home/image-31-compressed.webp" alt="Dessert table set up for an event">
     </div>
     <div class="events-copy">
       <h2>Dessert tables &amp; corporate orders</h2>
       <p>Beyond single cakes, we build full dessert spreads for weddings, offices and store openings — mixed platters of cupcakes, tarts and mini cakes, sized for anywhere from twenty to a thousand guests.</p>
-      <a href="#contact" class="btn btn-primary">Enquire About Catering</a>
+      <a href="./contact.html" class="btn btn-primary">Enquire About Catering</a>
     </div>
   </section>
 
   <!-- ===== 12b. SEASONAL SPECIALS ===== -->
   <section id="seasonal" class="seasonal reveal" data-animate="fade-up">
     <div class="seasonal-media">
-      <img src="https://loremflickr.com/800/650/pumpkin-cake,spiced-dessert?lock=44" alt="Spiced pumpkin cake with caramel drizzle and autumn garnish">
+      <img src="./src/Home/image-32-compressed.webp" alt="Spiced pumpkin cake with caramel drizzle and autumn garnish">
     </div>
     <div class="seasonal-copy">
       <p class="eyebrow-plain">Limited time</p>
       <h2>This month's special: Spiced Pumpkin &amp; Caramel</h2>
       <p>A soft pumpkin spice sponge layered with salted caramel and a whipped cinnamon cream, finished with candied pecans. We bake it only through the cooler months, while the pumpkin is actually in season.</p>
-      <a href="#contact" class="btn btn-primary">Order the Seasonal Special</a>
+      <a href="./contact.html" class="btn btn-primary">Order the Seasonal Special</a>
     </div>
   </section>
 
@@ -378,12 +409,12 @@
       <h2>Follow along <span class="handle">@rosette.bakehouse</span></h2>
     </div>
     <div class="insta-grid">
-      <img src="https://loremflickr.com/400/400/cake?lock=27" alt="Instagram post: finished cake">
-      <img src="https://loremflickr.com/400/400/cupcake?lock=28" alt="Instagram post: cupcakes">
-      <img src="https://loremflickr.com/400/400/pastry?lock=29" alt="Instagram post: pastries">
-      <img src="https://loremflickr.com/400/400/wedding-cake?lock=30" alt="Instagram post: wedding cake">
-      <img src="https://loremflickr.com/400/400/chocolate-dessert?lock=31" alt="Instagram post: chocolate dessert">
-      <img src="https://loremflickr.com/400/400/bakery?lock=32" alt="Instagram post: bakery counter">
+      <img src="./src/Home/image-33-compressed.webp" alt="Instagram post: finished cake">
+      <img src="./src/Home/image-34-compressed.webp" alt="Instagram post: cupcakes">
+      <img src="./src/Home/image-35-compressed.webp" alt="Instagram post: pastries">
+      <img src="./src/Home/image-36-compressed.webp" alt="Instagram post: wedding cake">
+      <img src="./src/Home/image-37-compressed.webp" alt="Instagram post: chocolate dessert">
+      <img src="./src/Home/image-38-compressed.webp" alt="Instagram post: bakery counter">
     </div>
   </section>
 
@@ -400,14 +431,14 @@
       </ul>
     </div>
     <div class="press-media">
-      <img src="https://loremflickr.com/700/560/newspaper,magazine-feature?lock=45" alt="Magazine clipping featuring Rosette Bakehouse">
+      <img src="./src/Home/image-38-compressed.webp" alt="Magazine clipping featuring Rosette Bakehouse">
     </div>
   </section>
 
   <!-- ===== 14. FAQ ===== -->
   <section id="faq" class="faq reveal" data-animate="fade-up">
     <div class="faq-media">
-      <img src="https://loremflickr.com/700/750/bakery,shop-front?lock=33" alt="Rosette Bakehouse shop front">
+      <img src="./src/Home/image-39-compressed.webp" alt="Rosette Bakehouse shop front">
     </div>
     <div class="faq-copy">
       <h2>Questions we get asked most</h2>
@@ -435,7 +466,7 @@
   <!-- ===== 14b. PACKAGING ===== -->
   <section id="packaging" class="packaging reveal" data-animate="fade-up">
     <div class="packaging-media">
-      <img src="https://loremflickr.com/800/650/kraft-box,eco-packaging?lock=46" alt="Cake boxed in recyclable kraft packaging with a cloth ribbon">
+      <img src="./src/Home/image-40-compressed.webp" alt="Cake boxed in recyclable kraft packaging with a cloth ribbon">
     </div>
     <div class="packaging-copy">
       <h2>Packed to survive the ride home</h2>
@@ -467,7 +498,7 @@
           <li><strong>Call</strong> +91 98765 43210</li>
           <li><strong>Hours</strong> Tue–Sun, 9am–8pm</li>
         </ul>
-        <img class="contact-image" src="https://loremflickr.com/700/450/bakery,storefront?lock=34" alt="Rosette Bakehouse storefront at street level">
+        <img class="contact-image" src="./src/Home/image-41-compressed.webp" alt="Rosette Bakehouse storefront at street level">
       </div>
       <form class="contact-form" id="contactForm">
         <label>Your name
@@ -491,39 +522,40 @@
 <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <a href="#top" class="brand">Rosette <span>Bakehouse</span></a>
+      <a href="./index.html" class="brand"><img src="./logo/Untitled design.webp" alt="" style="width: 70%;"></a>
       <p>Small-batch cakes from Ludhiana, baked fresh for every order.</p>
       <div class="social-icons">
-        <a href="#" aria-label="Instagram" class="social-icon">
+        <a href="./404.html" aria-label="Instagram" class="social-icon">
           <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .24 2.4.42.6.23 1 .5 1.5.99.5.5.75.9.98 1.5.18.4.36 1.2.42 2.4.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.24 2-.42 2.4-.23.6-.5 1-.98 1.5-.5.5-.9.75-1.5.98-.4.18-1.2.36-2.4.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2-.24-2.4-.42-.6-.23-1-.5-1.5-.98-.5-.5-.75-.9-.98-1.5-.18-.4-.36-1.2-.42-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.24-2 .42-2.4.23-.6.5-1 .98-1.5.5-.5.9-.75 1.5-.98.4-.18 1.2-.36 2.4-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.52 0-4.76.07-1 .05-1.5.2-1.86.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.36-.3.86-.34 1.86C3.07 8.46 3.07 8.83 3.07 12s0 3.52.07 4.76c.05 1 .2 1.5.34 1.86.18.47.4.8.75 1.15.35.35.68.57 1.15.75.36.14.86.3 1.86.34 1.24.07 1.61.07 4.76.07s3.52 0 4.76-.07c1-.05 1.5-.2 1.86-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.36.3-.86.34-1.86.07-1.24.07-1.61.07-4.76s0-3.52-.07-4.76c-.05-1-.2-1.5-.34-1.86a3 3 0 0 0-.75-1.15 3 3 0 0 0-1.15-.75c-.36-.14-.86-.3-1.86-.34C15.52 4 15.15 4 12 4zm0 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm5.65-2a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0z"/></svg>
         </a>
-        <a href="#" aria-label="Facebook" class="social-icon">
+        <a href="./404.html" aria-label="Facebook" class="social-icon">
           <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M13.5 21v-7.9h2.66l.4-3.09H13.5V8.1c0-.9.25-1.5 1.53-1.5h1.63V3.9c-.28-.04-1.25-.12-2.38-.12-2.35 0-3.96 1.44-3.96 4.07v2.14H7.65v3.09h2.67V21h3.18z"/></svg>
         </a>
-        <a href="#" aria-label="Pinterest" class="social-icon">
+        <a href="./404.html" aria-label="Pinterest" class="social-icon">
           <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.63 7.86 6.35 9.32-.09-.79-.17-2.01.03-2.88.19-.79 1.22-5.02 1.22-5.02s-.31-.62-.31-1.54c0-1.44.84-2.52 1.87-2.52.88 0 1.31.66 1.31 1.45 0 .88-.56 2.21-.85 3.44-.24 1.02.51 1.86 1.52 1.86 1.82 0 3.22-1.92 3.22-4.7 0-2.46-1.77-4.18-4.29-4.18-2.92 0-4.64 2.19-4.64 4.45 0 .88.34 1.83.76 2.34.08.1.1.19.07.29-.08.33-.26 1.02-.29 1.16-.05.19-.16.23-.37.14-1.38-.64-2.24-2.65-2.24-4.27 0-3.48 2.53-6.68 7.29-6.68 3.83 0 6.8 2.73 6.8 6.37 0 3.8-2.4 6.86-5.72 6.86-1.12 0-2.17-.58-2.53-1.27l-.69 2.62c-.25.96-.92 2.16-1.37 2.9.99.31 2.04.47 3.15.47 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
         </a>
-        <a href="#" aria-label="WhatsApp" class="social-icon">
+        <a href="./404.html" aria-label="WhatsApp" class="social-icon">
           <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12.02 2C6.5 2 2.03 6.47 2.03 12c0 1.77.46 3.45 1.28 4.93L2 22l5.2-1.36a9.9 9.9 0 0 0 4.82 1.23h.01c5.52 0 10-4.47 10-10S17.54 2 12.02 2zm0 18.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.09.81.82-3-.19-.31A8.08 8.08 0 0 1 3.93 12c0-4.47 3.63-8.1 8.09-8.1 4.46 0 8.08 3.63 8.08 8.1 0 4.47-3.62 8.1-8.08 8.1zm4.44-6.06c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02s-.42.06-.64.3c-.22.24-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
         </a>
       </div>
     </div>
 
     <div class="footer-links">
-      <h4>Explore</h4>
-      <a href="#story">Our Story</a>
-      <a href="#bestsellers">Bestsellers</a>
-      <a href="#categories">Occasions</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#faq">FAQ</a>
+      <h4>Quick Links</h4>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./cakes.html">Cakes</a>
+      <a href="./service.html">Service</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./contact.html">Contact</a>
     </div>
 
     <div class="footer-links">
       <h4>Visit</h4>
-      <a href="#contact">14 Model Town Road, Ludhiana</a>
-      <a href="tel:+919876543210">+91 98765 43210</a>
-      <a href="mailto:hello@rosettebakehouse.com">hello@rosettebakehouse.com</a>
-      <a href="#contact">Tue–Sun, 9am–8pm</a>
+      <a href="./contact.html">14 Model Town Road, Ludhiana</a>
+      <a href="./404.html">+91 98765 43210</a>
+      <a href="./404.html">hello@rosettebakehouse.com</a>
+      <a href="./contact.html">Tue–Sun, 9am–8pm</a>
     </div>
 
     <div class="footer-newsletter">

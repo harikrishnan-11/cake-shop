@@ -2,26 +2,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Header shrink + shadow on scroll ---------- */
   const header = document.getElementById('siteHeader');
+  const backToTop = document.getElementById('backToTop');
   const onScroll = () => {
-    header.classList.toggle('scrolled', window.scrollY > 20);
-    backToTop.classList.toggle('show', window.scrollY > 700);
+    if (header) header.classList.toggle('scrolled', window.scrollY > 20);
+    if (backToTop) backToTop.classList.toggle('show', window.scrollY > 700);
   };
 
   /* ---------- Mobile hamburger menu ---------- */
   const hamburger = document.getElementById('hamburgerBtn');
   const mainNav = document.getElementById('mainNav');
-  hamburger.addEventListener('click', () => {
-    const isOpen = mainNav.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen);
-  });
-  mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
+  if (hamburger && mainNav) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
     });
-  });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   /* ---------- Scroll reveal (IntersectionObserver) ---------- */
   const revealEls = document.querySelectorAll('.reveal');
@@ -60,65 +63,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Bestsellers horizontal scroll buttons ---------- */
   const track = document.getElementById('bestsellerTrack');
-  document.getElementById('scrollLeft').addEventListener('click', () => {
-    track.scrollBy({ left: -280, behavior: 'smooth' });
-  });
-  document.getElementById('scrollRight').addEventListener('click', () => {
-    track.scrollBy({ left: 280, behavior: 'smooth' });
-  });
+  const scrollLeftBtn = document.getElementById('scrollLeft');
+  const scrollRightBtn = document.getElementById('scrollRight');
+  if (track && scrollLeftBtn && scrollRightBtn) {
+    scrollLeftBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -280, behavior: 'smooth' });
+    });
+    scrollRightBtn.addEventListener('click', () => {
+      track.scrollBy({ left: 280, behavior: 'smooth' });
+    });
+  }
 
   /* ---------- Gallery lightbox ---------- */
   const galleryImgs = document.querySelectorAll('.gallery-img');
-  const lightbox = document.createElement('div');
-  lightbox.className = 'lightbox';
-  lightbox.innerHTML = `<button class="lightbox-close" aria-label="Close">&times;</button><img alt="">`;
-  document.body.appendChild(lightbox);
-  const lightboxImg = lightbox.querySelector('img');
+  if (galleryImgs.length) {
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `<button class="lightbox-close" aria-label="Close">&times;</button><img alt="">`;
+    document.body.appendChild(lightbox);
+    const lightboxImg = lightbox.querySelector('img');
 
-  galleryImgs.forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightbox.classList.add('open');
+    galleryImgs.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
     });
-  });
-  const closeLightbox = () => lightbox.classList.remove('open');
-  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+    const closeLightbox = () => lightbox.classList.remove('open');
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+  }
 
   /* ---------- Testimonial carousel ---------- */
   const testimonials = document.querySelectorAll('.testimonial');
   const dotsWrap = document.getElementById('testimonialDots');
-  let activeIndex = 0;
-  let testimonialTimer;
+  if (testimonials.length && dotsWrap) {
+    let activeIndex = 0;
+    let testimonialTimer;
 
-  testimonials.forEach((_, i) => {
-    const dot = document.createElement('button');
-    if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => showTestimonial(i));
-    dotsWrap.appendChild(dot);
-  });
-  const dots = dotsWrap.querySelectorAll('button');
+    testimonials.forEach((_, i) => {
+      const dot = document.createElement('button');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showTestimonial(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = dotsWrap.querySelectorAll('button');
 
-  function showTestimonial(index) {
-    testimonials[activeIndex].classList.remove('active');
-    dots[activeIndex].classList.remove('active');
-    activeIndex = index;
-    testimonials[activeIndex].classList.add('active');
-    dots[activeIndex].classList.add('active');
+    function showTestimonial(index) {
+      testimonials[activeIndex].classList.remove('active');
+      dots[activeIndex].classList.remove('active');
+      activeIndex = index;
+      testimonials[activeIndex].classList.add('active');
+      dots[activeIndex].classList.add('active');
+    }
+
+    function nextTestimonial() {
+      showTestimonial((activeIndex + 1) % testimonials.length);
+    }
+
+    function startTestimonialTimer() {
+      clearInterval(testimonialTimer);
+      testimonialTimer = setInterval(nextTestimonial, 5500);
+    }
+    startTestimonialTimer();
+    dots.forEach(dot => dot.addEventListener('click', startTestimonialTimer));
   }
-
-  function nextTestimonial() {
-    showTestimonial((activeIndex + 1) % testimonials.length);
-  }
-
-  function startTestimonialTimer() {
-    clearInterval(testimonialTimer);
-    testimonialTimer = setInterval(nextTestimonial, 5500);
-  }
-  startTestimonialTimer();
-  dots.forEach(dot => dot.addEventListener('click', startTestimonialTimer));
 
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.accordion-item').forEach(item => {
@@ -126,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const panel = item.querySelector('.accordion-panel');
     trigger.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.accordion-item.open').forEach(openItem => {
+      item.closest('.accordion').querySelectorAll('.accordion-item.open').forEach(openItem => {
         openItem.classList.remove('open');
         openItem.querySelector('.accordion-panel').style.maxHeight = null;
       });
@@ -140,29 +151,35 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Contact form (demo submit) ---------- */
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    formSuccess.classList.add('show');
-    contactForm.reset();
-    setTimeout(() => formSuccess.classList.remove('show'), 5000);
-  });
+  if (contactForm && formSuccess) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formSuccess.classList.add('show');
+      contactForm.reset();
+      setTimeout(() => formSuccess.classList.remove('show'), 5000);
+    });
+  }
 
   const footerForm = document.getElementById('footerForm');
-  footerForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const input = footerForm.querySelector('input');
-    input.value = 'Subscribed!';
-    setTimeout(() => { input.value = ''; }, 2500);
-  });
+  if (footerForm) {
+    footerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = footerForm.querySelector('input');
+      input.value = 'Subscribed!';
+      setTimeout(() => { input.value = ''; }, 2500);
+    });
+  }
 
   /* ---------- Back to top ---------- */
-  const backToTop = document.getElementById('backToTop');
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
   window.addEventListener('scroll', onScroll);
   onScroll();
 
   /* ---------- Footer year ---------- */
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
