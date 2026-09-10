@@ -599,8 +599,11 @@ main > section{ padding:5.5rem 1.5rem; }
   .main-nav, .header-cta{ display:none; }
   .hamburger{ display:flex; }
   .main-nav.open{
-    display:flex; position:absolute; top:100%; left:0; right:0;
+    margin:0;
+    display:flex; position:absolute; top:100%; left:00%; right:-5px;
     flex-direction:column; background:var(--cream); padding:1.5rem;
+    align-items:center; font-size:1.25rem;
+    height:100vh;width:100%;
     border-bottom:1px solid rgba(46,26,32,.1); gap:1rem;
     box-shadow:0 20px 30px -20px rgba(46,26,32,.3);
   }
